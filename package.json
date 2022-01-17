@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@mswjs/interceptors": "^0.13.1"
+  }
+}
