@@ -1,4 +1,4 @@
-import { request } from 'https';
+import * as https from 'https';
 import { createInterceptor } from '@mswjs/interceptors';
 import { interceptClientRequest } from '@mswjs/interceptors/lib/interceptors/ClientRequest/index.js';
 
@@ -21,6 +21,7 @@ interceptor.on('request', (request) => {
 });
 
 // isn't intercepted
-request('https://example.com/test', (res) => {})
+https
+  .request('https://example.com/test', (res) => {})
   .on('error', console.error)
   .end();

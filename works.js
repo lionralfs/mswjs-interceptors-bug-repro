@@ -20,6 +20,7 @@ interceptor.on('request', (request) => {
   console.log('[%s] %s', request.method, request.url.toString());
 });
 
+// is intercepted
 https
   .request('https://example.com/test', (res) => {})
   .on('error', console.error)
